@@ -6,12 +6,6 @@ def opstream(handle):
             if part.strip():
                 yield int(part)
 
-def groups(iterator, size):
-    try:
-        yield tuple(int(iterator.next()) for _ in range(size))
-    except:
-        return
-
 def main(argv):
     with open(argv[1], 'r') as handle:
         inputs = list(opstream(handle))
